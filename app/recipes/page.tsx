@@ -10,16 +10,16 @@ export default function Receitas() {
   return (
     <div className="min-h-screen bg-violet-200 flex-items-center justify-center p-10">
       <h1 className="text-2xl font-semibold mb-2 text-black text-center">Página de receitas!</h1>
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full justify-center">
         {dados.map((receitas) => (
-          <div key={receitas.id}>
+          <div className="justify-between" key={receitas.id}>
             <img
               src={receitas.image}
               width={150}
               height={150}
               alt={receitas.name}
             />
-            <div>
+            <div className="text-2xl font-semibold mb-2 text-black">
               <Link href="/detalhes/details">{receitas.name}</Link>
             </div>
           </div>
